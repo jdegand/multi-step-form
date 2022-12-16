@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Multi-step form</title>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="container-nav">
+      <nav>
+        <ul class="nav-numbers-ul">
+          <li class="step-number fill">
+            <div class="step-number-circle">1</div>
+          </li>
+          <li class="step-number">
+            <div class="step-number-circle">2</div>
+          </li>
+          <li class="step-number">
+              <div class="step-number-circle">3</div>
+          </li>
+          <li class="step-number">
+            <div class="step-number-circle">4</div>
+          </li>
+        </ul>
+        <div class="nav-numbers-second-ul mobile-hide">
+          <div class="nav-numbers-second-ul-div">
+              <div class="pastel">Step 1</div>
+              <div>Your Info</div>
+          </div>
+          <div class="nav-numbers-second-ul-div">
+            <div class="pastel">Step 2</div>
+            <div>Select plan</div>
+          </div>
+          <div class="nav-numbers-second-ul-div">
+            <div class="pastel">Step 3</div>
+            <div>Add-ons</div>
+          </div>
+          <div class="nav-numbers-second-ul-div">
+            <div class="pastel">Step 4</div>
+            <div>Summary</div>
+          </div>
+        </div>
+      </nav>  
+    </div>
+    <div class="form-container">
+        <form id="form">
+          <div class="step step-1 hide active">
+            <div class="step-1-headings">
+              <h1>Personal info</h1>
+              <h2>Please provide your name, email address, and phone number.</h2>
+            </div>
+            <div class="step-1-inputs">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="e.g. Stephen King" required>
+              <label for="email">Email Address</label>
+              <input id="email" type="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+              <label for="phone">Phone Number</label>
+              <input id="phone" type="tel" name="phone" placeholder="e.g. +1 234 567 890" pattern="[1]{1} [0-9]{3} [0-9]{3} [0-9]{3}" required>
+            </div>
+            <div class="step-button-container">
+              <button type="button" class="invisible">Go Back</button>
+              <button data-next type="button" class="next-button">Next Step</button>
+            </div>
+          </div>
+          <div class="step step-2 hide">
+            <div class="step-2-headings">
+              <h1>Select your plan</h1>
+              <h2>You have the option of monthly or yearly billing.</h2>
+            </div>
+            <div class="step-2-inputs">
+              <div class="step-2-input-container">
+                <input id="arcade" class="radio-button" type="radio" name="plan" value="arcade" required>
+                <div class="radio-tile">
+                  <div>
+                    <img src="assets/images/icon-arcade.svg" alt="">
+                  </div>
+                  <div>
+                    <label for="arcade">Arcade</label>
+                    <div>
+                      <div class="monthly">$9/mo</div>
+                      <div class="yearly hide">$90/yr</div>
+                      <div class="yearly-savings hide">2 months free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-2-input-container">
+                <input id="advanced" class="radio-button" type="radio" name="plan" value="advanced">
+                <div class="radio-tile">
+                  <div>
+                    <img src="assets/images/icon-advanced.svg" alt="">
+                  </div>
+                  <div>
+                    <label for="advanced">Advanced</label>
+                    <div>
+                      <div class="monthly">$12/mo</div>
+                      <div class="yearly hide">$120/yr</div>
+                      <div class="yearly-savings hide">2 months free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-2-input-container">
+                <input id="pro" class="radio-button" type="radio" name="plan" value="pro">
+                <div class="radio-tile">
+                  <div>
+                    <img src="assets/images/icon-pro.svg" alt="">
+                  </div>
+                  <div>
+                    <label for="pro">Pro</label>
+                    <div>
+                      <div class="monthly">$15/mo</div>
+                      <div class="yearly hide">$150/yr</div>
+                      <div class="yearly-savings hide">2 months free</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="step-2-toggle">
+            <div class="step-2-toggle-monthly-text marine">Monthly</div>
+            <label class="switch">
+              <input id="toggle" type="checkbox" name="duration">
+              <span class="slider round"></span>
+            </label>
+            <div class="step-2-toggle-yearly-text">Yearly</div>
+          </div>
+          <div class="step-button-container">
+            <button data-prev type="button" class="prev-button">Go Back</button>
+            <button data-next type="button" class="next-button">Next Step</button>
+          </div>
+        </div>
+          <div class="step step-3 hide">
+            <div class="step-3-headings">
+              <h1>Pick add-ons</h1>
+              <h2> Add-ons help enhance your gaming experience.</h2>
+            </div>
+            <div class="step-3-inputs">
+              <div class="step-3-input-container">
+                <input id="online" type="checkbox" name="addon" value="online service">
+                <div class="step-3-root-tile">
+                  <div>
+                    <label for="online">Online service</label>
+                    <div>Access to multiplayer games</div>
+                  </div>
+                  <div>
+                    <div class="monthly">+$1/mo</div>
+                    <div class="yearly hide">+$10/yr</div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-3-input-container">
+                <input id="storage" type="checkbox" name="addon" value="larger storage">
+                <div class="step-3-root-tile">
+                  <div>
+                    <label for="storage">Larger Storage</label>
+                    <div>Extra 1TB of cloud save</div>
+                  </div>
+                  <div>
+                    <div class="monthly">+$2/mo</div>
+                    <div class="yearly hide">+$20/yr</div>
+                  </div>
+                </div>
+              </div>
+              <div class="step-3-input-container">
+                <input id="profile" type="checkbox" name="addon" value="customizable profile">
+                <div class="step-3-root-tile">
+                  <div>
+                    <label for="profile">Customizable Profile</label>
+                    <div>Custom theme on your profile</div>
+                  </div>
+                  <div>
+                    <div class="monthly">+$2/mo</div>
+                    <div class="yearly hide">+$20/yr</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step-button-container">
+              <button data-prev type="button" class="prev-button">Go Back</button>
+              <button data-next type="button" class="next-button">Next Step</button>
+            </div>
+          </div>
+          <div class="step step-4 hide">
+            <div class="step-4-headings">
+              <h1>Finishing up</h1>
+              <h2>Double-check everything looks OK before confirming.</h2>
+            </div>
+            <div class="step-4-dynamic">
+              <table id="step-4-table">
+                <tr>
+                  <th><span id="step-4-plan">Arcade</span><span id="term">(Monthly)</span>
+                    <div id="change" class="change">Change</div>
+                  </th>
+                  <th></th>
+                </tr>
+                <!--<tr>
+                  <td>Online Service</td>
+                  <td>+$10/yr</td>
+                </tr>
+                <tr>
+                  <td>Larger Storage</td>
+                  <td>+$20/yr</td>
+                </tr>
+                <tr>
+                  <td>Total (per year)</td>
+                  <td>$120/yr</td>
+                </tr>-->
+              </table>
+            </div>
+            <div class="step-button-container">
+              <button data-prev type="button" class="prev-button">Go Back</button>
+              <button id="submit-btn" type="submit" class="confirm-button">Confirm</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</body>
+</html>
