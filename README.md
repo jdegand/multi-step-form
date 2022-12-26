@@ -154,7 +154,7 @@ Using divs inside a ul creates invalid html (see below) -  better to use multipl
 - [Html5 tutorial](https://html5-tutorial.net/forms/checkboxes/) - checkboxes
 - [Stack Overflow](https://stackoverflow.com/questions/33277777/css-circle-with-border) - css circle with border
 - [YouTube](https://www.youtube.com/watch?v=VdqtdKXxKhM&t=565s) - web dev simplified 
-- [Stack Overflow](https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css)
+- [Stack Overflow](https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css) - hide check radio button with css
 - [Modern CSS Dev](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - pure css custom styled radio buttons
 - [Codepen](https://codepen.io/caseycallow/pen/yaGQMo) - radio button tiles
 - [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/) - get value of selected radio button
